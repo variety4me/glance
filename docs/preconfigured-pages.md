@@ -6,7 +6,7 @@ Pull requests with your page configurations are welcome!
 
 > [!NOTE]
 >
-> Pages must be placed under a top level `pages:` key, you can read more about that [here](configuration.md#pages).
+> Pages must be placed under a top level `pages:` key, you can read more about that [here](pages-columns.md/#pages).
 
 ## Startpage
 
@@ -224,3 +224,4 @@ Pull requests with your page configurations are welcome!
           style: vertical-cards
 ```
 </details>
+

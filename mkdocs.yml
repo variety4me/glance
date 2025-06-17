@@ -1,0 +1,79 @@
+site_name: GLANCE APP
+
+nav:
+  - Configuring Glance: 
+    - Basics: configuration.md
+    - Server: server.md
+    - Document, Branding, Theme: document-branding-theme.md
+    - Pages & Columns: pages-columns.md
+    - Widgets: 
+      - Basics: widgets.md
+      - RSS & Videos: rss-videos.md
+      - Hacker News & Lobster: hacker-lobster.md
+      - Reddit: reddit.md
+      - Search & Group: search-group.md
+      - Split Column: split-column.md
+      - Custom API: config-custom-api.md
+      - Extension: extension.md
+      - Weather & Todo: weather-todo.md
+      - Monitor & Releases: monitor-releases.md
+      - Docker Containers: docker-containers.md
+      - DNS Stats: dns-stats.md
+      - Server Stats: server-stats.md
+      - Repository & Bookmarks: repo-bookmarks.md
+      - Changedetection.io: changedetection.md 
+      - Clock & Calendar: calendar-clock.md
+      - Markets: markets.md
+      - Twitch: twitch.md
+      - Iframe & HTML: iframe-html.md
+  - Custom API: custom-api.md
+  - Extensions: extensions.md
+  - Preconfigured Pages: preconfigured-pages.md
+  - Themes: themes.md
+  - Version 0.7.0 Upgrade: v0.7.0-upgrade.md  
+
+theme:
+  name: material
+  features:
+    - navigation.indexes
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/link
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off
+        name: Switch to system preference
+  font:
+    text: Poppins
+    code: Azeret Mono
+  logo: logo.png
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  # Additional Markdown extensions...
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.superfences
+  - pymdownx.snippets
+
