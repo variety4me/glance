@@ -1,6 +1,7 @@
 site_name: GLANCE APP
 
 nav:
+  - Home: index.md
   - Configuring Glance: 
     - Basics: configuration.md
     - Server: server.md
