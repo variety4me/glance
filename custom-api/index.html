@@ -1,0 +1,1568 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../iframe-html/">
+      
+      
+        <link rel="next" href="../extensions/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>Custom API - GLANCE APP</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,700,700i%7CAzeret+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Poppins";--md-code-font:"Azeret Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#examples" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="GLANCE APP" class="md-header__button md-logo" aria-label="GLANCE APP" data-md-component="logo">
+      
+  <img src="../logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            GLANCE APP
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Custom API
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1M8 13h8v-2H8zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4a5 5 0 0 0 5-5 5 5 0 0 0-5-5"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5M7 15a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="GLANCE APP" class="md-nav__button md-logo" aria-label="GLANCE APP" data-md-component="logo">
+      
+  <img src="../logo.png" alt="logo">
+
+    </a>
+    GLANCE APP
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Configuring Glance
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Configuring Glance
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Basics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Server
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../document-branding-theme/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Document, Branding, Theme
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pages-columns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pages & Columns
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Widgets
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Widgets
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../widgets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Basics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rss-videos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RSS & Videos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hacker-lobster/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hacker News & Lobster
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reddit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Reddit
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../search-group/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Search & Group
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../split-column/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Split Column
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config-custom-api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Custom API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../extension/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Extension
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../weather-todo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Weather & Todo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../monitor-releases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Monitor & Releases
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker-containers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Docker Containers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dns-stats/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DNS Stats
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../server-stats/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Server Stats
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../repo-bookmarks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Repository & Bookmarks
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../changedetection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Changedetection.io
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../calendar-clock/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Clock & Calendar
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../markets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Markets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../twitch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Twitch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iframe-html/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Iframe & HTML
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Custom API
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Custom API
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Functions
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../extensions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Extensions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../preconfigured-pages/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Preconfigured Pages
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../themes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Themes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../v0.7.0-upgrade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Version 0.7.0 Upgrade
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Functions
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Custom API</h1>
+
+<p><a href="#functions">Jump to function definitions</a></p>
+<h2 id="examples">Examples</h2>
+<p>The best way to get an idea of how the templates work would be with a bunch examples. Here are the most common use cases:</p>
+<p>JSON response:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;My Title&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;content&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;My Content&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>To access the two fields in the JSON response, you would use the following:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>{{ .JSON.String &quot;title&quot; }}<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>{{ .JSON.String &quot;content&quot; }}<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Output:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>My Title<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>My Content<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+<hr>
+
+<p>JSON response:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;author&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;John Doe&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;posts&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;My Title&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;content&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;My Content&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;My Title 2&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;content&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;My Content 2&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>To loop through the array of posts, you would use the following:</p>
+<div class="highlight"><pre><span></span><code>{{ range .JSON.Array &quot;posts&quot; }}
+  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>{{ .String &quot;title&quot; }}<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>{{ .String &quot;content&quot; }}<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+{{ end }}
+</code></pre></div>
+<p>Output:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>My Title<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>My Content<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>My Title 2<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>My Content 2<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Notice the missing <code>.JSON</code> when accessing the title and content, this is because the range function sets the context to the current array element.</p>
+<p>If you want to access the top-level context within the range, you can use the following:</p>
+<div class="highlight"><pre><span></span><code>{{ range .JSON.Array &quot;posts&quot; }}
+  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>{{ .String &quot;title&quot; }}<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>{{ .String &quot;content&quot; }}<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>{{ $.JSON.String &quot;author&quot; }}<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+{{ end }}
+</code></pre></div>
+<p>Output:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>My Title<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>My Content<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>John Doe<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>My Title 2<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>My Content 2<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>John Doe<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+<hr>
+
+<p>JSON response:</p>
+<div class="highlight"><pre><span></span><code><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;Apple&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;Banana&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;Cherry&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;Watermelon&quot;</span>
+<span class="p">]</span>
+</code></pre></div>
+<p>Somewhat awkwardly, when the current context is a basic type that isn't an object, the way you specify its type is to use an empty string as the key. So, to loop through the array of strings, you would use the following:</p>
+<div class="highlight"><pre><span></span><code>{{ range .JSON.Array &quot;&quot; }}
+  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>{{ .String &quot;&quot; }}<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+{{ end }}
+</code></pre></div>
+<p>Output:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>Apple<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>Banana<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>Cherry<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>Watermelon<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>To access an item at a specific index, you could use the following:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>{{ .JSON.String &quot;0&quot; }}<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Output:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>Apple<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+<hr>
+
+<p>JSON response:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;user&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;address&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;city&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;New York&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;state&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;NY&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>To easily access deeply nested objects, you can use the following dot notation:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>{{ .JSON.String &quot;user.address.city&quot; }}<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>{{ .JSON.String &quot;user.address.state&quot; }}<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Output:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>New York<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>NY<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Using indexes anywhere in the path is also supported:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;users&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;John Doe&quot;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Jane Doe&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>{{ .JSON.String &quot;users.0.name&quot; }}<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>{{ .JSON.String &quot;users.1.name&quot; }}<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Output:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>John Doe<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>Jane Doe<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+<hr>
+
+<p>JSON response:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;user&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;John Doe&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;age&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>To check if a field exists, you can use the following:</p>
+<div class="highlight"><pre><span></span><code>{{ if .JSON.Exists &quot;user.age&quot; }}
+  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>{{ .JSON.Int &quot;user.age&quot; }}<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+{{ else }}
+  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>Age not provided<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+{{ end }}
+</code></pre></div>
+<p>Output:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>30<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+<hr>
+
+<p>JSON response:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;price&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;discount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Calculations can be performed on either ints or floats. If both numbers are ints, an int will be returned, otherwise a float will be returned. If you try to divide by zero, 0 will be returned. If you provide non-numeric values, <code>NaN</code> will be returned.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>{{ sub (.JSON.Int &quot;price&quot;) (.JSON.Int &quot;discount&quot;) }}<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Output:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>90<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Other operations include <code>add</code>, <code>mul</code>, <code>div</code> and <code>mod</code>.</p>
+<hr>
+
+<p>JSON response:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;posts&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Exploring the Depths of Quantum Computing&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-10-27T10:00:00Z&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;A Beginner&#39;s Guide to Sustainable Living&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-11-15T14:30:00+01:00&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;The Art of Baking Sourdough Bread&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-12-03T08:45:22-08:00&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>To parse the date and display the relative time (e.g. 2h, 1d, etc), you would use the following:</p>
+<div class="highlight"><pre><span></span><code>{{ range .JSON.Array &quot;posts&quot; }}
+  &lt;div&gt;{{ .String &quot;title&quot; }}&lt;/div&gt;
+  &lt;div {{ .String &quot;date&quot; | parseTime &quot;rfc3339&quot; | toRelativeTime }}&gt;&lt;/div&gt;
+{{ end }}
+</code></pre></div>
+<p>The <code>parseTime</code> function takes two arguments: the layout of the date string and the date string itself. The layout can be one of the following: "RFC3339", "RFC3339Nano", "DateTime", "DateOnly", "TimeOnly" or a custom layout in Go's <a href="https://pkg.go.dev/time#pkg-constants">date format</a>.</p>
+<p>Output:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>Exploring the Depths of Quantum Computing<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">data-dynamic-relative-time</span><span class="o">=</span><span class="s">&quot;1698400800&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>A Beginner&#39;s Guide to Sustainable Living<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">data-dynamic-relative-time</span><span class="o">=</span><span class="s">&quot;1700055000&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>The Art of Baking Sourdough Bread<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">data-dynamic-relative-time</span><span class="o">=</span><span class="s">&quot;1701621922&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>You don't have to worry about the internal implementation, this will then be dynamically populated by Glance on the client side to show the correct relative time.</p>
+<p>The important thing to notice here is that the return value of <code>toRelativeTime</code> must be used as an attribute in an HTML tag, be it a <code>div</code>, <code>li</code>, <code>span</code>, etc.</p>
+<hr>
+
+<p>In some instances, you may want to know the status code of the response. This can be done using the following:</p>
+<div class="highlight"><pre><span></span><code>{{ if eq .Response.StatusCode 200 }}
+  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Success!<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+{{ else }}
+  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Failed to fetch data<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+{{ end }}
+</code></pre></div>
+<p>You can also access the response headers:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>{{ .Response.Header.Get &quot;Content-Type&quot; }}<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+<hr>
+
+<p>JSON response:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Steve&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;age&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">}</span>
+<span class="p">{</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Alex&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;age&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span><span class="p">}</span>
+<span class="p">{</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;John&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;age&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">35</span><span class="p">}</span>
+</code></pre></div>
+<p>The above format is "<a href="https://docs.mulesoft.com/dataweave/latest/dataweave-formats-ndjson">ndjson</a>" or "<a href="https://jsonlines.org/">JSON Lines</a>", where each line is a separate JSON object. To parse this format, you must first disable the JSON validation check in your config, since by default the response is expected to be a single valid JSON object:</p>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">custom-api</span>
+<span class="w">  </span><span class="nt">skip-json-validation</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</code></pre></div>
+<p>Then, to iterate over each object you can use <code>.JSONLines</code>:</p>
+<div class="highlight"><pre><span></span><code>{{ range .JSONLines }}
+  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>{{ .String &quot;name&quot; }} is {{ .Int &quot;age&quot; }} years old<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+{{ end }}
+</code></pre></div>
+<p>Output:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Steve is 30 years old<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Alex is 25 years old<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>John is 35 years old<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>For other ways of selecting data from a JSON Lines response, have a look at the docs for <a href="https://github.com/tidwall/gjson/tree/master?tab=readme-ov-file#json-lines">tidwall/gjson</a>. For example, to  get an array of all names, you can use the following:</p>
+<div class="highlight"><pre><span></span><code>{{ range .JSON.Array &quot;..#.name&quot; }}
+  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>{{ .String &quot;&quot; }}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+{{ end }}
+</code></pre></div>
+<p>Output:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Steve<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Alex<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>John<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div>
+<hr>
+
+<p>In some instances, you may need to make two consecutive API calls, where you use the result of the first call in the second call. To achieve this, you can make additional HTTP requests from within the template itself using the following syntax:</p>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">custom-api</span>
+<span class="w">  </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://api.example.com/get-id-of-something</span>
+<span class="w">  </span><span class="nt">template</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">    </span><span class="no">{{ $theID := .JSON.String &quot;id&quot; }}</span>
+
+<span class="w">    </span><span class="no">{{</span>
+<span class="w">      </span><span class="no">$something := newRequest (concat &quot;https://api.example.com/something/&quot; $theID)</span>
+<span class="w">        </span><span class="no">| withParameter &quot;key&quot; &quot;value&quot;</span>
+<span class="w">        </span><span class="no">| withHeader &quot;Authorization&quot; &quot;Bearer token&quot;</span>
+<span class="w">        </span><span class="no">| getResponse</span>
+<span class="w">    </span><span class="no">}}</span>
+
+<span class="w">    </span><span class="no">{{ $something.JSON.String &quot;title&quot; }}</span>
+</code></pre></div>
+<p>Here, <code>$theID</code> gets retrieved from the result of the first API call and used in the second API call. The <code>newRequest</code> function creates a new request, and the <code>getResponse</code> function executes it. You can also use <code>withParameter</code> and <code>withHeader</code> to optionally add parameters and headers to the request.</p>
+<p>If you need to make a request to a URL that requires dynamic parameters, you can omit the <code>url</code> property in the YAML and run the request entirely from within the template itself:</p>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">custom-api</span>
+<span class="w">  </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Events from the last 24h</span>
+<span class="w">  </span><span class="nt">template</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">    </span><span class="no">{{</span>
+<span class="w">      </span><span class="no">$events := newRequest &quot;https://api.example.com/events&quot;</span>
+<span class="w">        </span><span class="no">| withParameter &quot;after&quot; (offsetNow &quot;-24h&quot; | formatTime &quot;rfc3339&quot;)</span>
+<span class="w">        </span><span class="no">| getResponse</span>
+<span class="w">    </span><span class="no">}}</span>
+
+<span class="w">    </span><span class="no">{{ if eq $events.Response.StatusCode 200 }}</span>
+<span class="w">      </span><span class="no">{{ range $events.JSON.Array &quot;events&quot; }}</span>
+<span class="w">        </span><span class="no">&lt;div&gt;{{ .String &quot;title&quot; }}&lt;/div&gt;</span>
+<span class="w">        </span><span class="no">&lt;div {{ .String &quot;date&quot; | parseTime &quot;rfc3339&quot; | toRelativeTime }}&gt;&lt;/div&gt;</span>
+<span class="w">      </span><span class="no">{{ end }}</span>
+<span class="w">    </span><span class="no">{{ else }}</span>
+<span class="w">      </span><span class="no">&lt;p&gt;Failed to fetch data: {{ $events.Response.Status }}&lt;/p&gt;</span>
+<span class="w">    </span><span class="no">{{ end }}</span>
+</code></pre></div>
+<p><em>Note that you need to manually check for the correct status code.</em></p>
+<h2 id="functions">Functions</h2>
+<p>The following functions are available on the <code>JSON</code> object:</p>
+<ul>
+<li><code>String(key string) string</code>: Returns the value of the key as a string.</li>
+<li><code>Int(key string) int</code>: Returns the value of the key as an integer.</li>
+<li><code>Float(key string) float</code>: Returns the value of the key as a float.</li>
+<li><code>Bool(key string) bool</code>: Returns the value of the key as a boolean.</li>
+<li><code>Array(key string) []JSON</code>: Returns the value of the key as an array of <code>JSON</code> objects.</li>
+<li><code>Exists(key string) bool</code>: Returns true if the key exists in the JSON object.</li>
+</ul>
+<p>The following functions are available on the <code>Options</code> object:</p>
+<ul>
+<li><code>StringOr(key string, default string) string</code>: Returns the value of the key as a string, or the default value if the key does not exist.</li>
+<li><code>IntOr(key string, default int) int</code>: Returns the value of the key as an integer, or the default value if the key does not exist.</li>
+<li><code>FloatOr(key string, default float) float</code>: Returns the value of the key as a float, or the default value if the key does not exist.</li>
+<li><code>BoolOr(key string, default bool) bool</code>: Returns the value of the key as a boolean, or the default value if the key does not exist.</li>
+<li><code>JSON(key string) JSON</code>: Returns the value of the key as a stringified <code>JSON</code> object, or throws an error if the key does not exist.</li>
+</ul>
+<p>The following helper functions provided by Glance are available:</p>
+<ul>
+<li><code>toFloat(i int) float</code>: Converts an integer to a float.</li>
+<li><code>toInt(f float) int</code>: Converts a float to an integer.</li>
+<li><code>toRelativeTime(t time.Time) template.HTMLAttr</code>: Converts Time to a relative time such as 2h, 1d, etc which dynamically updates. <strong>NOTE:</strong> the value of this function should be used as an attribute in an HTML tag, e.g. <code>&lt;span {{ toRelativeTime .Time }}&gt;&lt;/span&gt;</code>.</li>
+<li><code>now() time.Time</code>: Returns the current time.</li>
+<li><code>offsetNow(offset string) time.Time</code>: Returns the current time with an offset. The offset can be positive or negative and must be in the format "3h" "-1h" or "2h30m10s".</li>
+<li><code>duration(str string) time.Duration</code>: Parses a string such as <code>1h</code>, <code>24h</code>, <code>5h30m</code>, etc into a <code>time.Duration</code>.</li>
+<li><code>parseTime(layout string, s string) time.Time</code>: Parses a string into time.Time. The layout must be provided in Go's <a href="https://pkg.go.dev/time#pkg-constants">date format</a>. You can alternatively use these values instead of the literal format: "unix", "RFC3339", "RFC3339Nano", "DateTime", "DateOnly".</li>
+<li><code>formatTime(layout string, s string) time.Time</code>: Formats a <code>time.Time</code> into a string. The layout uses the same format as <code>parseTime</code>.</li>
+<li><code>parseLocalTime(layout string, s string) time.Time</code>: Same as the above, except in the absence of a timezone, it will use the local timezone instead of UTC.</li>
+<li><code>parseRelativeTime(layout string, s string) time.Time</code>: A shorthand for <code>{{ .String "date" | parseTime "rfc3339" | toRelativeTime }}</code>.</li>
+<li><code>add(a, b float) float</code>: Adds two numbers.</li>
+<li><code>sub(a, b float) float</code>: Subtracts two numbers.</li>
+<li><code>mul(a, b float) float</code>: Multiplies two numbers.</li>
+<li><code>div(a, b float) float</code>: Divides two numbers.</li>
+<li><code>mod(a, b int) int</code>: Remainder after dividing a by b (a % b).</li>
+<li><code>formatApproxNumber(n int) string</code>: Formats a number to be more human-readable, e.g. 1000 -&gt; 1k.</li>
+<li><code>formatNumber(n float|int) string</code>: Formats a number with commas, e.g. 1000 -&gt; 1,000.</li>
+<li><code>trimPrefix(prefix string, str string) string</code>: Trims the prefix from a string.</li>
+<li><code>trimSuffix(suffix string, str string) string</code>: Trims the suffix from a string.</li>
+<li><code>trimSpace(str string) string</code>: Trims whitespace from a string on both ends.</li>
+<li><code>replaceAll(old string, new string, str string) string</code>: Replaces all occurrences of a string in a string.</li>
+<li><code>replaceMatches(pattern string, replacement string, str string) string</code>: Replaces all occurrences of a regular expression in a string.</li>
+<li><code>findMatch(pattern string, str string) string</code>: Finds the first match of a regular expression in a string.</li>
+<li><code>findSubmatch(pattern string, str string) string</code>: Finds the first submatch of a regular expression in a string.</li>
+<li><code>sortByString(key string, order string, arr []JSON): []JSON</code>: Sorts an array of JSON objects by a string key in either ascending or descending order.</li>
+<li><code>sortByInt(key string, order string, arr []JSON): []JSON</code>: Sorts an array of JSON objects by an integer key in either ascending or descending order.</li>
+<li><code>sortByFloat(key string, order string, arr []JSON): []JSON</code>: Sorts an array of JSON objects by a float key in either ascending or descending order.</li>
+<li><code>sortByTime(key string, layout string, order string, arr []JSON): []JSON</code>: Sorts an array of JSON objects by a time key in either ascending or descending order. The format must be provided in Go's <a href="https://pkg.go.dev/time#pkg-constants">date format</a>.</li>
+<li><code>concat(strings ...string) string</code>: Concatenates multiple strings together.</li>
+<li><code>unique(key string, arr []JSON) []JSON</code>: Returns a unique array of JSON objects based on the given key.</li>
+<li><code>percentChange(current float, previous float) float</code>: Calculates the percentage change between two numbers.</li>
+<li><code>startOfDay(t time.Time) time.Time</code>: Returns the start of the day for a given time.</li>
+<li><code>endOfDay(t time.Time) time.Time</code>: Returns the end of the day for a given time.</li>
+</ul>
+<p>The following helper functions provided by Go's <code>text/template</code> are available:</p>
+<ul>
+<li><code>eq(a, b any) bool</code>: Compares two values for equality.</li>
+<li><code>ne(a, b any) bool</code>: Compares two values for inequality.</li>
+<li><code>lt(a, b any) bool</code>: Compares two values for less than.</li>
+<li><code>le(a, b any) bool</code>: Compares two values for less than or equal to.</li>
+<li><code>gt(a, b any) bool</code>: Compares two values for greater than.</li>
+<li><code>ge(a, b any) bool</code>: Compares two values for greater than or equal to.</li>
+<li><code>and(args ...bool) bool</code>: Returns true if <strong>all</strong> arguments are true; accepts two or more boolean values.</li>
+<li><code>or(args ...bool) bool</code>: Returns true if <strong>any</strong> argument is true; accepts two or more boolean values.</li>
+<li><code>not(a bool) bool</code>: Returns the opposite of the value.</li>
+<li><code>index(a any, b int) any</code>: Returns the value at the specified index of an array.</li>
+<li><code>len(a any) int</code>: Returns the length of an array.</li>
+<li><code>printf(format string, a ...any) string</code>: Returns a formatted string.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.indexes", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>
