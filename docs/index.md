@@ -17,7 +17,7 @@
 * Docker containers status
 * Server stats
 * Custom widgets
-* [and many more...](docs/configuration.md)
+* [and many more...](configuration)
 
 ### Fast and lightweight
 * Low memory usage
