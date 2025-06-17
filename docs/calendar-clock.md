@@ -1,4 +1,3 @@
-
 ### Clock
 Display a clock showing the current time and date. Optionally, also display the the time in other timezones.
 
